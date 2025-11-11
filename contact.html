@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Void Monk Studio</title>
+    <link rel="icon" type="image/png" href="assets/icons/Void MOnk LOgo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header class="nav-container">
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/icons/new logo for av bar.png" alt="Void Monk Studio Logo" class="logo-img">
+            </a>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="animate-fade-in">Contact Us</h1>
+                <p class="contact-tagline animate-fade-in">
+                    Let's create something amazing together
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Info & Form -->
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details animate-fade-in">
+                        <h2>Get in Touch</h2>
+                        <div class="contact-item">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+919489892949">+91 94898 92949</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p><a href="mailto:voidmonkstudio@gmail.com">voidmonkstudio@gmail.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Website</h3>
+                            <p><a href="https://www.voidmonkstudio.com" target="_blank">www.voidmonkstudio.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form animate-fade-in">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" id="sendBtn" class="btn submit-btn">Send Message</button>
+                            <span id="formStatus" class="form-status"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="map-container animate-fade-in">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5997807873375!2d77.5936947!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBangalore%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1635835330122!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Void Monk Studio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase & Form Script -->
+    <script type="module">
+        import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBx6b8eyKalgJ82q_29mb0qE3HFqIKEGhw",
+            authDomain: "mechconnect-a0943.firebaseapp.com",
+            projectId: "mechconnect-a0943",
+            storageBucket: "mechconnect-a0943.appspot.com",
+            messagingSenderId: "980876516289",
+            appId: "1:980876516289:web:2294db73905ce4875a6d40",
+            measurementId: "G-CT2PZGDB7L"
+        };
+
+        // Initialize Firebase safely
+        const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        
+        const db = getFirestore(app);
+
+        console.log("✅ Firebase initialized successfully!");
+
+        // Handle Form Submission
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+        const sendBtn = document.getElementById("sendBtn");
+
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            sendBtn.textContent = "Sending...";
+            sendBtn.disabled = true;
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            try {
+                await addDoc(collection(db, "contactMessages"), {
+                    name,
+                    email,
+                    phone,
+                    message,
+                    timestamp: serverTimestamp()
+                });
+
+                formStatus.textContent = "✅ Message sent successfully!";
+                formStatus.style.color = "var(--primary-color)";
+                contactForm.reset();
+            } catch (error) {
+                console.error("❌ Firestore Error:", error);
+                formStatus.textContent = "❌ Failed to send message. Try again.";
+                formStatus.style.color = "crimson";
+            } finally {
+                sendBtn.textContent = "Send Message";
+                sendBtn.disabled = false;
+            }
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
