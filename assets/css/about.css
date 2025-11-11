@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root{--bg:#08090e;--muted:#0f1720;--accent:#00BFFF;--light:#dfe7ee}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--light)}
+.about-hero{padding:6rem 0;background:linear-gradient(180deg,rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url('../img/about-hero.jpg') center/cover no-repeat}
+.about-hero h1{color:var(--accent);font-size:2.6rem}
+.mission-vision{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:3rem 0}
+.mission, .vision{background:rgba(255,255,255,0.02);padding:1.6rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.mission h2, .vision h2{color:var(--accent)}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.value-card{padding:1.2rem;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+@media(max-width:900px){.mission-vision{grid-template-columns:1fr}.about-hero{padding:4rem 0}}
