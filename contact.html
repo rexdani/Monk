@@ -5,78 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Void Monk Studio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-        <header class="nav-container header-transparent fixed-top">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">VOID MONK STUDIO</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                        <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:var(--accent)"></i></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="mainNav">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="clients.html">Clients</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+    <header class="nav-container">
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-logo">VOID MONK STUDIO</a>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <!-- Hero Section -->
-                <section class="contact-hero py-5" data-aos="fade-up">
-                    <div class="container">
-                        <h1>Contact Us</h1>
-                        <p class="lead">Let's create something amazing together</p>
-                    </div>
-                </section>
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="animate-fade-in">Contact Us</h1>
+                <p class="contact-tagline animate-fade-in">
+                    Let's create something amazing together
+                </p>
+            </div>
+        </section>
 
         <!-- Contact Info & Form -->
-                <section class="contact-info py-5" data-aos="fade-up">
-                    <div class="container">
-                        <div class="row g-4">
-                            <div class="col-lg-5">
-                                <h2>Get in Touch</h2>
-                                <p><strong>Phone</strong><br><a href="tel:+919489892949">+91 94898 92949</a></p>
-                                <p><strong>Email</strong><br><a href="mailto:voidmonkstudio@gmail.com">voidmonkstudio@gmail.com</a></p>
-                                <p><strong>Website</strong><br><a href="https://www.voidmonkstudio.com" target="_blank">www.voidmonkstudio.com</a></p>
-                            </div>
-                            <div class="col-lg-7">
-                                <form id="contactForm">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label">Phone (Optional)</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <button type="submit" id="sendBtn" class="btn btn-primary me-3">Send Message</button>
-                                        <span id="formStatus" class="form-status"></span>
-                                    </div>
-                                </form>
-                            </div>
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details animate-fade-in">
+                        <h2>Get in Touch</h2>
+                        <div class="contact-item">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+919489892949">+91 94898 92949</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p><a href="mailto:voidmonkstudio@gmail.com">voidmonkstudio@gmail.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Website</h3>
+                            <p><a href="https://www.voidmonkstudio.com" target="_blank">www.voidmonkstudio.com</a></p>
                         </div>
                     </div>
-                </section>
+
+                    <div class="contact-form animate-fade-in">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" id="sendBtn" class="btn submit-btn">Send Message</button>
+                            <span id="formStatus" class="form-status"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Map Section -->
         <section class="map-section">
@@ -107,10 +113,71 @@
         </div>
     </footer>
 
-    <script type="module" src="js/firebase-contact.js"></script>
+    <!-- Firebase & Form Script -->
+    <script type="module">
+        import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBx6b8eyKalgJ82q_29mb0qE3HFqIKEGhw",
+            authDomain: "mechconnect-a0943.firebaseapp.com",
+            projectId: "mechconnect-a0943",
+            storageBucket: "mechconnect-a0943.appspot.com",
+            messagingSenderId: "980876516289",
+            appId: "1:980876516289:web:2294db73905ce4875a6d40",
+            measurementId: "G-CT2PZGDB7L"
+        };
+
+        // Initialize Firebase safely
+        const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        
+        const db = getFirestore(app);
+
+        console.log("✅ Firebase initialized successfully!");
+
+        // Handle Form Submission
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+        const sendBtn = document.getElementById("sendBtn");
+
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            sendBtn.textContent = "Sending...";
+            sendBtn.disabled = true;
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            try {
+                await addDoc(collection(db, "contactMessages"), {
+                    name,
+                    email,
+                    phone,
+                    message,
+                    timestamp: serverTimestamp()
+                });
+
+                formStatus.textContent = "✅ Message sent successfully!";
+                formStatus.style.color = "var(--primary-color)";
+                contactForm.reset();
+            } catch (error) {
+                console.error("❌ Firestore Error:", error);
+                formStatus.textContent = "❌ Failed to send message. Try again.";
+                formStatus.style.color = "crimson";
+            } finally {
+                sendBtn.textContent = "Send Message";
+                sendBtn.disabled = false;
+            }
+        });
+    </script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

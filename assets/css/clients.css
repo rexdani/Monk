@@ -1,9 +1,0 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-:root{--bg:#08090e;--accent:#00BFFF;--light:#dfe7ee}
-.clients-hero{padding:4rem 0;background:linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.65)),url('../img/clients-hero.jpg') center/cover no-repeat;text-align:center}
-.logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;align-items:center}
-.logo-card{background:rgba(255,255,255,0.02);padding:1.25rem;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:transform .3s}
-.logo-card:hover{transform:translateY(-6px);box-shadow:0 10px 25px rgba(0,191,255,0.05)}
-.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2rem}
-.testimonial-card{background:rgba(255,255,255,0.02);padding:1.2rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
-@media(max-width:768px){.clients-hero{padding:3rem 0}}
